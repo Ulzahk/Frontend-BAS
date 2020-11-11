@@ -1,0 +1,56 @@
+{
+  "name": "frontend-bas",
+  "version": "1.0.0",
+  "description": "Basic Authentication System App",
+  "main": "index.js",
+  "scripts": {
+    "vercel-build": "npm run build",
+    "start": "webpack-dev-server --open --mode development",
+    "build": "webpack --mode production",
+    "lint": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ulzahk/Frontend-BAS.git"
+  },
+  "keywords": [
+    "React",
+    "Sass",
+    "Webpack"
+  ],
+  "author": "Francisco (Ulzahk) Suarez <ulzahk@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ulzahk/Frontend-BAS/issues"
+  },
+  "homepage": "https://github.com/Ulzahk/Frontend-BAS#readme",
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/standard/eslintrc.json"
+    ]
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "vercel": "^20.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.5",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^5.0.1",
+    "file-loader": "^6.2.0",
+    "html-loader": "^1.3.2",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^1.3.0",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.0.5",
+    "standard": "^16.0.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.7.2"
+  }
+}
