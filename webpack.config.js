@@ -46,7 +46,7 @@ module.exports = {
             loader: 'file-loader',
             options:
             {
-              name: 'assets/static/[hash].[ext]'
+              name: './assets/static/[hash].[ext]'
             }
           }
         ]
@@ -63,7 +63,7 @@ module.exports = {
       filename: './index.html'
     }),
     new MiniCssExtractPlugin({
-      filename: 'assets/[name].css'
+      filename: './assets/[name].css'
     })
   ]
 }
