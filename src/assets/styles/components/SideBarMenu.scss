@@ -1,0 +1,45 @@
+@import '../Vars.scss';
+
+.sidebarmenu {
+  display: flex;
+  border-right: 1px solid $black;
+  justify-content: center;
+}
+
+.sidebarmenu__nav {
+  height: 100%;
+}
+
+.sidebarmenu__nav--list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebarmenu__nav--list a {
+  text-decoration: none;
+  list-style: none;
+  color: $black;
+  background-color: $white;
+  font-weight: bold;
+  font-size: 24px;
+  transition: 0.3s;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin: 0px 10px 0 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.sidebarmenu__nav--list a:hover:not(:first-child){
+  background-color: $black;
+  color: $white;
+}
+
+.sidebarmenu__nav--list a:hover:first-child {
+  opacity: 0.5;
+}

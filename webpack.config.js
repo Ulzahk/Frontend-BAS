@@ -10,12 +10,12 @@ module.exports = {
     publicPath: '/'
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.ico']
+    extensions: ['.js', '.ico']
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader'
@@ -47,6 +47,17 @@ module.exports = {
             options:
             {
               name: './assets/static/[hash].[ext]'
+            }
+          }
+        ]
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'svg-url-loader',
+            options: {
+              limit: 10000
             }
           }
         ]
