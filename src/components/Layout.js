@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { SideBarMenu } from './SideBarMenu'
 import '../assets/styles/components/Layout.scss'
 
