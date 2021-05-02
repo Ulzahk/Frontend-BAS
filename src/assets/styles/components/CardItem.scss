@@ -21,6 +21,7 @@
   height: 100%;
   border-radius: 7px;
   transition: 0.3s;
+  position: relative;
 }
 
 .card__wrapper:hover {
@@ -97,11 +98,46 @@
   border-color: $dragon;
 } 
 
+.card__label--container{
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  margin-top: -7px;
+  margin-left: -3px;
+}
+
+.card__label {
+  margin: 0 0 0 -55px;
+  z-index: 1;
+  transform: rotate(315deg);
+  background: linear-gradient(to right, #F7971E, #FFD200);
+  text-align: center;
+  width: 95%;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  position: relative;
+}
+
+.card__label--number{
+  margin: 0 0 0 55px;
+  text-align: left;
+  color: $white;
+  font-weight: bold;
+  font-family: $theme-font;
+  font-size: 1em;
+}
+
+
 .card__title {
   border-bottom: 3px solid $black;
   background-color: $black;
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .card__container .grass{
@@ -295,6 +331,23 @@
   color: $white;
 }
 
+@media screen and (max-width: 425px){
+  .card__label {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 375px){
+  .card__label {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 320px){
+  .card__label {
+    width: 70%;
+  }
+}
 
 
 

@@ -25,6 +25,7 @@ export const CardsList = () => {
         {pokemons.map((item) => (
           <CardItem
             key={item.id}
+            id={item.id}
             name={item.name}
             url={item.url}
             types={item.types}

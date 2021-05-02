@@ -1,6 +1,6 @@
 @import '../Vars.scss';
 
-.loginform__container{
+.otploginform__container{
   align-self: center;
   background-color: $white;
   border: 3px solid $black;
@@ -13,61 +13,37 @@
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.5);
 }
 
-.loginform__title{
+.otploginform__title{
   text-align: center;
   margin: 0;
 }
 
-.loginform__form{
+.otploginform__form{
   display: flex;
   flex-direction: column;
 }
 
-.loginform__text{
+.otploginform__text{
   margin: 10px 0 3px 0;
   font-weight: bold;
 }
 
-.loginform___input{
+.otploginform___input{
   border: 1px solid $black;
   border-radius: 3px;
   padding: 10px 10px 10px 10px;
 }
 
-.loginform___input:focus{
+.otploginform___input:focus{
   outline: none;
 }
 
-.loginform___input[type='text']{
+.otploginform___input[type='text']{
   font-family: $theme-font;
   color: $black;
 }
 
-.loginform__bottomtext--container{
-  display: flex;
-  flex-direction: row;
-  font-size: 14px;
-}
-
-.loginform__bottomtext--container p{
-  margin: 5px 0 10px 0;
-  font-weight: bold;
-}
-
-.loginform__bottomtext--container a{
-  margin: 5px 0 10px 5px;
-  font-weight: bold;
-  color: $link;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.loginform__bottomtext--container a:hover{
-  text-decoration: underline;
-}
-
-
-.loginform___button{
+.otploginform___button{
   border: 1px solid $black;
   border-radius: 3px;
   background-color: $white;
@@ -80,9 +56,10 @@
   width: 70%;
   align-self: center;
   padding: 10px;
+  margin-top: 25px;
 }
 
-.loginform___button:hover{
+.otploginform___button:hover{
   background-color: $black;
   color: $white;
 }

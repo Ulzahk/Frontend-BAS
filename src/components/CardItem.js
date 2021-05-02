@@ -2,10 +2,15 @@ import React from 'react'
 
 import '../assets/styles/components/CardItem.scss'
 
-export const CardItem = ({ name, url, types }) => {
+export const CardItem = ({ id, name, url, types }) => {
   return (
     <div className='card__wrapper'>
       <div className={`card__container ${types[0].type.name}`}>
+        <div className='card__label--container'>
+          <div className='card__label'>
+            <p className='card__label--number'>{`# ${id}`}</p>
+          </div>
+        </div>
         <div className={`card__title ${types[0].type.name}`}>
           <h3 className='card__title--text'>{name}</h3>
         </div>
