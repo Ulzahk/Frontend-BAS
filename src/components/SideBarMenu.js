@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import LockIcon from '../assets/static/private-lock-icon.svg'
+import LockIcon from '../assets/static/private-lock-icon.png'
 
 import '../assets/styles/components/SideBarMenu.scss'
 

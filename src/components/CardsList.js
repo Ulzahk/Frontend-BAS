@@ -39,9 +39,7 @@ export const CardsList = ({ children }) => {
   useEffect(() => {
     (async () => {
       const data = await fetchPokemon()
-      console.log(data)
       setPokemons(data)
-      console.log(pokemons)
       setControlVariable(true)
     })()
   }, [controlVariable])
