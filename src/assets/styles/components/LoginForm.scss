@@ -1,0 +1,85 @@
+@import '../Vars.scss';
+
+.loginform__container{
+  align-self: center;
+  background-color: $white;
+  border: 1px solid $black;
+  border-radius: 7px;
+  margin-top: 5%;
+  padding: 25px 30px 25px 30px;
+  width: 27.5%;
+  min-width: 200px;
+  max-width: 400px;
+}
+
+.loginform__title{
+  text-align: center;
+  margin: 0;
+}
+
+.loginform__form{
+  display: flex;
+  flex-direction: column;
+}
+
+.loginform__text{
+  margin: 10px 0 3px 0;
+  font-weight: bold;
+}
+
+.loginform___input{
+  border: 1px solid $black;
+  padding: 10px 10px 10px 10px;
+}
+
+.loginform___input:focus{
+  outline: none;
+}
+
+.loginform___input[type='text']{
+  font-family: $theme-font;
+  color: $black;
+}
+
+.loginform__bottomtext--container{
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+}
+
+.loginform__bottomtext--container p{
+  margin: 5px 0 10px 0;
+  font-weight: bold;
+}
+
+.loginform__bottomtext--container a{
+  margin: 5px 0 10px 5px;
+  font-weight: bold;
+  color: $link;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.loginform__bottomtext--container a:hover{
+  text-decoration: underline;
+}
+
+
+.loginform___button{
+  border: 1px solid $black;
+  background-color: $white;
+  color: $black;
+  font-family: $theme-font;
+  font-weight: bold;
+  font-size: 14px;
+  transition: 0.3s;
+  cursor: pointer;
+  width: 70%;
+  align-self: center;
+  padding: 10px;
+}
+
+.loginform___button:hover{
+  background-color: $black;
+  color: $white;
+}

@@ -52,3 +52,37 @@
   opacity: 0.5;
 }
 
+@media screen and (max-width: 425px){
+  .sidebarmenu{
+    display: flex;
+    border-top: 1px solid $black;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 0;
+    height: 10%;
+    width: 100%;
+    z-index: 1;
+    background-color: $white;
+    padding-top: 5px;
+  }
+
+  .sidebarmenu__nav{
+    margin: 0;
+  }
+
+  .sidebarmenu__nav--list{
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .sidebarmenu__nav--list a{
+    margin: 0 0 0 0;
+    padding: 10px 20px 0 20px;
+    border-left: 1px solid $black;
+  }
+
+  .sidebarmenu__nav--list a:last-child{
+    border-right: 1px solid $black;
+  }
+}
