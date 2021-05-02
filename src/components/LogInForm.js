@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import { useInputValue } from '../hooks/useInputValue'
 
-import '../assets/styles/components/LogInForm.scss'
+import '../assets/styles/components/SignInForm.scss'
 
 export const LogInForm = ({ onSubmit, title }) => {
   const user = useInputValue('')
