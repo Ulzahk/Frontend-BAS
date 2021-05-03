@@ -8,7 +8,7 @@ import { UserContext } from '../hooks/UserContext'
 import '../assets/styles/components/SignInForm.scss'
 
 export const LogInForm = ({ onSubmit, title }) => {
-  const { controlLevelOne, setControlLevelOne } = useContext(UserContext)
+  const { controlLevelOne, setControlLevelOne, setErrorsLevelOne } = useContext(UserContext)
 
   const user = useInputValue('')
   const password = useInputValue('')
@@ -17,6 +17,7 @@ export const LogInForm = ({ onSubmit, title }) => {
 
   const logInFunction = async (event) => {
     try {
+      setErrorsLevelOne({})
       event.preventDefault()
 
       const requestOptions = {
@@ -28,12 +29,12 @@ export const LogInForm = ({ onSubmit, title }) => {
 
       // eslint-disable-next-line no-undef
       const response = await fetch(url, requestOptions)
+      if (response.status === 401) return setErrorsLevelOne({ login: 'Invalid Information' })
       const responseData = await response.json()
-
-      if (responseData.token === undefined) return
 
       window.localStorage.setItem('tokenLevelOne', responseData.token)
       window.localStorage.setItem('isLogged', 'isLogged')
+
 
       setControlLevelOne(!controlLevelOne)
     } catch (error) {

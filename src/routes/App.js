@@ -16,6 +16,7 @@ import '../assets/styles/containers/App.scss'
 
 export const App = () => {
   const [controlLevelOne, setControlLevelOne] = useState(false)
+  const [errorsLevelOne, setErrorsLevelOne] = useState({})
   const isLogged = window.localStorage.getItem('isLogged')
   const isLoggedAWS = window.localStorage.getItem('isLoggedAWS')
 
@@ -29,7 +30,13 @@ export const App = () => {
 
   return (
     <BrowserRouter>
-      <UserContext.Provider value={{ controlLevelOne, setControlLevelOne }}>
+      <UserContext.Provider value={{
+        controlLevelOne,
+        errorsLevelOne,
+        setControlLevelOne,
+        setErrorsLevelOne
+      }}
+      >
         <Layout>
           <Switch>
             <Route exact path='/' component={LevelZero} />
