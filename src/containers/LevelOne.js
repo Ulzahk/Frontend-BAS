@@ -1,15 +1,20 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 
 import { CardsList } from '../components/CardsList'
+
+import { UserContext } from '../hooks/UserContext'
 
 import '../assets/styles/containers/LevelOne.scss'
 
 export const LevelOne = () => {
   const [username, setUsername] = useState()
+
+  const { controlLevelOne, setControlLevelOne } = useContext(UserContext)
+
   const logOutFunction = () => {
     window.localStorage.setItem('isLogged', 'isLoggedOut')
     window.localStorage.setItem('tokenLevelOne', '')
-    window.location.reload()
+    setControlLevelOne(!controlLevelOne)
   }
 
   const getUserData = async () => {
@@ -35,7 +40,7 @@ export const LevelOne = () => {
 
   useEffect(() => {
     getUserData()
-  })
+  }, [controlLevelOne])
 
   return (
     <div className='levelone'>

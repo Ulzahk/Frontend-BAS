@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import { useInputValue } from '../hooks/useInputValue'
 
+import { UserContext } from '../hooks/UserContext'
+
 import '../assets/styles/components/SignInForm.scss'
 
 export const LogInForm = ({ onSubmit, title }) => {
+  const { controlLevelOne, setControlLevelOne } = useContext(UserContext)
+
   const user = useInputValue('')
   const password = useInputValue('')
   const userPlaceholder = 'Username or Email'
@@ -31,7 +35,7 @@ export const LogInForm = ({ onSubmit, title }) => {
       window.localStorage.setItem('tokenLevelOne', responseData.token)
       window.localStorage.setItem('isLogged', 'isLogged')
 
-      window.location.reload()
+      setControlLevelOne(!controlLevelOne)
     } catch (error) {
       console.log(error)
     }
