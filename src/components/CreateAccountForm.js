@@ -1,4 +1,5 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 
 import { useInputValue } from '../hooks/useInputValue'
 
@@ -13,11 +14,44 @@ export const CreateAccountForm = ({ onSubmit, title }) => {
   const emailPlaceholder = 'Email'
   const passwordPlaceholder = 'Password'
   const confirmPasswordPlaceholder = 'Password Confirmation'
+  const history = useHistory()
+
+
+  const createAccount = async (event) => {
+    try {
+      event.preventDefault()
+
+      if (password.value !== confirmPassword.value) return false
+
+      const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          username: user.value,
+          password: password.value,
+          email: email.value
+        })
+      }
+      const url = 'https://backend-bas-ulzahk.vercel.app/api/v1/users'
+
+      // eslint-disable-next-line no-undef
+      const response = await fetch(url, requestOptions)
+      const responseData = await response.json()
+
+      console.log(responseData);
+
+      if (responseData === undefined) return
+
+      history.push('/level-one');
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   return (
     <div className='createaccountform__container'>
       <h2 className='createaccountform__title'>{title}</h2>
-      <form className='createaccountform__form' onSubmit={onSubmit}>
+      <form className='createaccountform__form' onSubmit={createAccount}>
         <p className='createaccountform__text'>User</p>
         <input
           className='createaccountform___input'

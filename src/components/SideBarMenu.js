@@ -18,9 +18,9 @@ export const SideBarMenu = () => {
           <Link to='/level-one'>
             <li>1</li>
           </Link>
-          <Link to='/level-two'>
+          {/* <Link to='/level-two'>
             <li>2</li>
-          </Link>
+          </Link> */}
         </ul>
       </nav>
     </header>

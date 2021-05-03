@@ -11,10 +11,36 @@ export const LogInForm = ({ onSubmit, title }) => {
   const userPlaceholder = 'Username or Email'
   const passwordPlaceholder = 'Password'
 
+  const logInFunction = async (event) => {
+    try {
+      event.preventDefault()
+
+      const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ user: user.value, password: password.value })
+      }
+      const url = 'https://backend-bas-ulzahk.vercel.app/api/v1/auth/user'
+
+      // eslint-disable-next-line no-undef
+      const response = await fetch(url, requestOptions)
+      const responseData = await response.json()
+
+      if (responseData.token === undefined) return
+
+      window.localStorage.setItem('tokenLevelOne', responseData.token)
+      window.localStorage.setItem('isLogged', 'isLogged')
+
+      window.location.reload()
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return (
     <div className='loginform__container'>
       <h2 className='loginform__title'>{title}</h2>
-      <form className='loginform__form' onSubmit={onSubmit}>
+      <form className='loginform__form' onSubmit={logInFunction}>
         <p className='loginform__text'>User</p>
         <input
           className='loginform___input'
