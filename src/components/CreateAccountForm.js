@@ -16,7 +16,6 @@ export const CreateAccountForm = ({ onSubmit, title }) => {
   const confirmPasswordPlaceholder = 'Password Confirmation'
   const history = useHistory()
 
-
   const createAccount = async (event) => {
     try {
       event.preventDefault()

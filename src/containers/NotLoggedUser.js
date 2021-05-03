@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 
 import { LogInForm } from '../components/LogInForm'
+
+import { UserContext } from '../hooks/UserContext'
 
 import '../assets/styles/containers/NotLoggedUser.scss'
 
 export const NotLoggedUser = (props) => {
+  const { controlLevelOne } = useContext(UserContext)
+
   const isLogged = window.localStorage.getItem('isLogged')
+
+  useEffect(() => {
+  }, [controlLevelOne])
 
   if (isLogged !== 'isLogged') {
     return (
