@@ -10,12 +10,12 @@ module.exports = {
     publicPath: '/'
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.ico']
+    extensions: ['.js', '.ico']
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader'
@@ -60,7 +60,8 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: './public/index.html',
-      filename: './index.html'
+      filename: './index.html',
+      favicon: './public/favicon.ico'
     }),
     new MiniCssExtractPlugin({
       filename: './assets/[name].css'

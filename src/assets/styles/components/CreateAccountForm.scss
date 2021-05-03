@@ -1,0 +1,66 @@
+@import '../Vars.scss';
+
+.createaccountform__container{
+  align-self: center;
+  background-color: $white;
+  border: 3px solid $black;
+  border-radius: 7px;
+  margin-top: 5%;
+  padding: 25px 30px 25px 30px;
+  width: 27.5%;
+  min-width: 200px;
+  max-width: 400px;
+  height: 100%;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.5);
+}
+
+.createaccountform__title{
+  text-align: center;
+  margin: 0;
+}
+
+.createaccountform__form{
+  display: flex;
+  flex-direction: column;
+}
+
+.createaccountform__text{
+  margin: 10px 0 3px 0;
+  font-weight: bold;
+}
+
+.createaccountform___input{
+  border: 1px solid $black;
+  border-radius: 3px;
+  padding: 10px 10px 10px 10px;
+}
+
+.createaccountform___input:focus{
+  outline: none;
+}
+
+.createaccountform___input[type='text']{
+  font-family: $theme-font;
+  color: $black;
+}
+
+.createaccountform___button{
+  margin-top: 25px;
+  border: 1px solid $black;
+  border-radius: 3px;
+  background-color: $white;
+  color: $black;
+  font-family: $theme-font;
+  font-weight: bold;
+  font-size: 14px;
+  transition: 0.3s;
+  cursor: pointer;
+  width: 70%;
+  align-self: center;
+  padding: 10px;
+}
+
+.createaccountform___button:hover{
+  background-color: $black;
+  color: $white;
+}

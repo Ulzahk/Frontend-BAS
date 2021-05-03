@@ -1,0 +1,27 @@
+.createaccount {
+  width: 100%;
+  margin: 40px;
+  margin-left: 90px;
+  display: flex;
+  flex-direction: column;
+}
+
+.createaccount__title{
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 425px){
+  .createaccount{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    padding-bottom: 75px;
+  }
+
+  .createaccount__title{
+    margin-top: 20px;
+  }
+}

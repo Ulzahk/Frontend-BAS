@@ -1,0 +1,88 @@
+@import '../Vars.scss';
+
+.sidebarmenu {
+  display: flex;
+  border-right: 3px solid $black;
+  justify-content: center;
+  position: fixed;
+  height: 100%;
+}
+
+.sidebarmenu__nav {
+  height: 100%;
+}
+
+.sidebarmenu__nav--list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebarmenu__logo--image {
+  width: 35px;
+  height: 35px;
+}
+
+.sidebarmenu__nav--list a {
+  text-decoration: none;
+  list-style: none;
+  color: $black;
+  background-color: $white;
+  font-weight: bold;
+  font-size: 24px;
+  transition: 0.3s;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin: 0px 10px 0 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid $black;
+}
+
+.sidebarmenu__nav--list a:hover:not(:first-child){
+  background-color: $black;
+  color: $white;
+}
+
+.sidebarmenu__nav--list a:hover:first-child {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 425px){
+  .sidebarmenu{
+    display: flex;
+    border-top: 3px solid $black;
+    justify-content: space-evenly;
+    position: fixed;
+    bottom: 0;
+    height: 10%;
+    width: 100%;
+    z-index: 2;
+    background-color: $white;
+    padding-top: 5px;
+  }
+
+  .sidebarmenu__nav{
+    margin: 0;
+  }
+
+  .sidebarmenu__nav--list{
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .sidebarmenu__nav--list a{
+    margin: 0 0 0 0;
+    padding: 10px 20px 0 20px;
+    border-left: 3px solid $black;
+  }
+
+  .sidebarmenu__nav--list a:last-child{
+    border-right: 3px solid $black;
+  }
+}

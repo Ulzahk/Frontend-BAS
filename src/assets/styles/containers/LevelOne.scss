@@ -1,0 +1,59 @@
+@import '../Vars.scss';
+
+.levelone {
+  width: 100%;
+  margin: 40px;
+  margin-left: 90px;
+}
+
+.levelone__title{
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 30px;
+}
+
+.levelone__container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.levelone__text {
+  text-align: center;
+  font-weight: bold;
+}
+
+.levelone__button{
+  border: 1px solid $black;
+  border-radius: 3px;
+  background-color: $white;
+  color: $black;
+  font-family: $theme-font;
+  font-weight: bold;
+  font-size: 14px;
+  transition: 0.3s;
+  cursor: pointer;
+  width: 50%;
+  align-self: center;
+  padding: 10px;
+}
+
+.levelone__button:hover{
+  background-color: $black;
+  color: $white;
+}
+
+@media screen and (max-width: 425px){
+  .levelone{
+    width: 100%;
+    margin: 0;
+    position: relative;
+    padding-bottom: 75px;
+  }
+
+  .levelone__title{
+    margin-top: 20px;
+  }
+}

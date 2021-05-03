@@ -1,0 +1,24 @@
+.leveltwo {
+  width: 100%;
+  margin: 40px;
+  margin-left: 90px;
+}
+
+.leveltwo__title{
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 425px){
+  .leveltwo{
+    width: 100%;
+    margin: 0;
+    position: relative;
+    padding-bottom: 75px;
+  }
+
+  .leveltwo__title{
+    margin-top: 20px;
+  }
+}
