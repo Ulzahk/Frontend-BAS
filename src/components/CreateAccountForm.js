@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useHistory } from 'react-router-dom'
 
 import { useInputValue } from '../hooks/useInputValue'
+import { UserContext } from '../hooks/UserContext'
 
 import '../assets/styles/components/CreateAccountForm.scss'
 
 export const CreateAccountForm = ({ onSubmit, title }) => {
+  const { setErrorsLevelOne } = useContext(UserContext)
+
   const user = useInputValue('')
   const email = useInputValue('')
   const password = useInputValue('')
@@ -20,7 +23,14 @@ export const CreateAccountForm = ({ onSubmit, title }) => {
     try {
       event.preventDefault()
 
-      if (password.value !== confirmPassword.value) return false
+      if (user.value === '' || email.value === '' ||
+          password.value === '' || confirmPassword.value === '') {
+        return setErrorsLevelOne({ createAccount: 'Incompleted Information' })
+      }
+
+      if (password.value !== confirmPassword.value) {
+        return setErrorsLevelOne({ createAccount: 'Invalid Information' })
+      }
 
       const requestOptions = {
         method: 'POST',
@@ -37,11 +47,9 @@ export const CreateAccountForm = ({ onSubmit, title }) => {
       const response = await fetch(url, requestOptions)
       const responseData = await response.json()
 
-      console.log(responseData);
+      if (responseData === undefined) return setErrorsLevelOne({ createAccount: 'Invalid Information' })
 
-      if (responseData === undefined) return
-
-      history.push('/level-one');
+      history.push('/level-one')
     } catch (error) {
       console.log(error)
     }

@@ -10,13 +10,41 @@
   width: 27.5%;
   min-width: 200px;
   max-width: 400px;
-  height: 100%;
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.5);
 }
 
 .createaccountform__title{
   text-align: center;
   margin: 0;
+}
+
+.createaccountform__error--information{
+  align-self: center;
+  color: $white;
+  background-color: $black;
+  text-align: center;
+  width: 30%;
+  border-radius: 7px;
+  padding: 10px;
+  margin: 0;
+  margin-top: 30px;
+  position: absolute;
+  animation-name: createaccountform-errors;
+  animation-duration: 0.1s;
+}
+
+@keyframes createaccountform-errors {
+  from {
+    filter: blur(5px);
+    opacity: 0;
+    margin-top: 20px;
+  }
+
+  to {
+    filter: blur(0);
+    opacity: 1;
+    margin-top: 30px;
+  }
 }
 
 .createaccountform__form{
@@ -63,4 +91,36 @@
 .createaccountform___button:hover{
   background-color: $black;
   color: $white;
+}
+
+@media screen and (max-width: 425px){
+  .createaccountform{
+    width: 100%;
+    margin: 0;
+    position: relative;
+    padding-bottom: 75px;
+  }
+
+  .createaccountform__title{
+    margin-top: 20px;
+  }
+
+  .createaccountform__error--information{
+    width: 60%;
+    margin-top: 50px;
+  }
+
+  @keyframes createaccountform-errors {
+    from {
+      filter: blur(5px);
+      opacity: 0;
+      margin-top: 40px;
+    }
+  
+    to {
+      filter: blur(0);
+      opacity: 1;
+      margin-top: 50px;
+    }
+  }
 }
