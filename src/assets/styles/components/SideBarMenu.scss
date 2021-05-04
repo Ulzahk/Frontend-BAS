@@ -61,10 +61,12 @@
     justify-content: space-evenly;
     position: fixed;
     bottom: 0;
-    max-height: 14%;
+    margin-bottom: 0;
+    height: 5%;
     width: 100%;
     z-index: 2;
-    padding-top: 5px;
+    padding-top: 15px;
+    padding-bottom: 20px;
   }
 
   .sidebarmenu__nav{
@@ -78,12 +80,13 @@
   }
 
   .sidebarmenu__nav--list a{
+    height: auto;
     margin: 0 0 0 0;
     padding: 10px 20px 0 20px;
-    border-left: 3px solid $sidebar-border;
+    border-left: 1px solid $sidebar-border;
   }
 
   .sidebarmenu__nav--list a:last-child{
-    border-right: 3px solid $sidebar-border;
+    border-right: 1px solid $sidebar-border;
   }
 }

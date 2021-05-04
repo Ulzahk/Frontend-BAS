@@ -21,6 +21,7 @@ export const CreateAccountForm = ({ onSubmit, title }) => {
 
   const createAccount = async (event) => {
     try {
+      setErrorsLevelOne({})
       event.preventDefault()
 
       if (user.value === '' || email.value === '' ||
