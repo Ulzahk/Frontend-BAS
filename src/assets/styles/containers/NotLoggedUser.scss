@@ -1,15 +1,47 @@
+@import '../Vars.scss';
+
 .notloggeduser {
   width: 100%;
   margin: 40px;
   margin-left: 90px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .notloggeduser__title{
   text-align: center;
   margin-top: -10px;
   margin-bottom: 30px;
+}
+
+.notloggeduser__error--information{
+  align-self: center;
+  color: $white;
+  background-color: $black;
+  text-align: center;
+  width: 30%;
+  border-radius: 7px;
+  padding: 10px;
+  margin: 0;
+  margin-top: 30px;
+  position: absolute;
+  animation-name: levelone-errors;
+  animation-duration: 0.1s;
+}
+
+@keyframes levelone-errors {
+  from {
+    filter: blur(5px);
+    opacity: 0;
+    margin-top: 20px;
+  }
+
+  to {
+    filter: blur(0);
+    opacity: 1;
+    margin-top: 30px;
+  }
 }
 
 @media screen and (max-width: 425px){
@@ -22,5 +54,24 @@
 
   .notloggeduser__title{
     margin-top: 20px;
+  }
+
+  .notloggeduser__error--information{
+    width: 60%;
+    margin-top: 50px;
+  }
+
+  @keyframes levelone-errors {
+    from {
+      filter: blur(5px);
+      opacity: 0;
+      margin-top: 40px;
+    }
+  
+    to {
+      filter: blur(0);
+      opacity: 1;
+      margin-top: 50px;
+    }
   }
 }
