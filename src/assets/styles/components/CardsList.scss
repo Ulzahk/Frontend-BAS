@@ -1,3 +1,54 @@
+@import '../Vars.scss';
+
+.cardlist__search--container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.cardlist__search--wrapper{
+  border: 1px solid red;
+  background-color: $sidebar-border;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%; //420px
+  height: 100%;
+  padding: 25px 35px 25px 35px;
+}
+
+.cardlist__searchtitle{
+  color: $white;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0 0 10px 0;
+}
+
+.cardslist__searchbar{
+  background-color: $sidebar-border;
+  border: 3px solid $white;
+  border-radius: 50px;
+  color: $white;
+  font-family: $theme-font;
+  font-size: 16px;
+  padding: 7px 0 7px 10px;
+  width: 85%;
+}
+
+.cardslist__searchbar::placeholder{
+  font-family: $theme-font;
+  color: $white;
+}
+
+.cardslist__searchbar:focus{
+  outline: none;
+}
+
 .cardslist__container{
   display: grid;
   grid-template-rows: auto;
@@ -6,6 +57,16 @@
   row-gap: 20px;
   justify-content: center;
   align-items: center;
+}
+
+.cardslist__notfound--message{
+  grid-column: 1/end;
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  font-family: $theme-font;
+  font-weight: bold;
+  color: $black;
 }
 
 @media screen and (max-width: 1920px){
@@ -27,6 +88,10 @@
 }
 
 @media screen and (max-width: 768px){
+  .cardlist__search--wrapper{
+    width: 55%;
+  }
+
   .cardslist__container{
     grid-template-columns: repeat(3, 30%);
   }
@@ -39,6 +104,10 @@
 }
 
 @media screen and (max-width: 425px){
+  .cardlist__search--wrapper{
+    width: 70%;
+  }
+
   .cardslist__container{
     grid-template-columns: repeat(1, 80%);
   }

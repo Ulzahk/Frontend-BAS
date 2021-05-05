@@ -4,6 +4,7 @@ export const usePokemonList = () => {
   const [isLoading, setIsLoading] = useState(true)
   const [controlVariable, setControlVariable] = useState(false)
   const [pokemons, setPokemons] = useState([])
+  const [allPokemons, setAllPokemons] = useState([])
 
   const fetchPokemon = async () => {
     const response = await window.fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
@@ -30,9 +31,10 @@ export const usePokemonList = () => {
     (async () => {
       const data = await fetchPokemon()
       setPokemons(data)
+      setAllPokemons(data)
       setControlVariable(true)
     })()
   }, [controlVariable])
 
-  return [isLoading, pokemons]
+  return [isLoading, pokemons, allPokemons, setPokemons]
 }
