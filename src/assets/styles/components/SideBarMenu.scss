@@ -49,41 +49,57 @@
   color: $sidebar-border;
 }
 
+.sidebarmenu__nav--list a:focus:not(:first-child){
+  background-color: $white;
+  color: $sidebar-border;
+}
+
 .sidebarmenu__nav--list a:hover:first-child {
   opacity: 0.5;
 }
 
+
 @media screen and (max-width: 425px){
   .sidebarmenu{
     display: flex;
-    border-top: 3px solid $sidebar-border;
+    border-top: 2px solid $sidebar-border;
     background-color: $sidebar-border;
     justify-content: space-evenly;
     position: fixed;
     bottom: 0;
-    max-height: 14%;
+    margin-bottom: 0;
+    height: 16%;
     width: 100%;
     z-index: 2;
-    padding-top: 5px;
   }
 
   .sidebarmenu__nav{
     margin: 0;
+    height: 100%;
+    width: 100%;
   }
 
   .sidebarmenu__nav--list{
     flex-direction: row;
-    justify-content: flex-start;
+    align-items: center;
+    // justify-content: center;
     height: 100%;
+    padding-top: 10px;
   }
 
   .sidebarmenu__nav--list a{
+    // height: auto;
     margin: 0 0 0 0;
-    padding: 10px 20px 0 20px;
-    border-left: 3px solid $sidebar-border;
+    padding: 20px 20px 0 20px;
+    border-left: 1px solid $sidebar-border;
+  }
+
+  .sidebarmenu__nav--list a:focus:not(:first-child){
+    background-color: $white;
+    color: $sidebar-border;
   }
 
   .sidebarmenu__nav--list a:last-child{
-    border-right: 3px solid $sidebar-border;
+    border-right: 1px solid $sidebar-border;
   }
 }

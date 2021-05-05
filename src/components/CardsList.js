@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 // Logic
 import { usePokemonList } from '../hooks/usePokemonList'
@@ -11,7 +11,23 @@ import { Loader } from './Loader'
 import '../assets/styles/components/CardsList.scss'
 
 export const CardsList = () => {
-  const [isLoading, pokemons] = usePokemonList()
+  const [isLoading, pokemons, allPokemons, setPokemons] = usePokemonList()
+  const [query, setQuery] = useState('')
+
+  const handleSearch = (text) => {
+    setQuery(text)
+
+    // eslint-disable-next-line no-unused-expressions
+    text === undefined ? '' : text
+
+    const pokemonsFiltered = allPokemons.filter((pokemon) => {
+      return (
+        pokemon.name.toLowerCase().includes(text.toLowerCase()) ||
+        pokemon.types[0].type.name.toLowerCase().includes(text.toLowerCase())
+      )
+    })
+    setPokemons(pokemonsFiltered)
+  }
 
   if (isLoading) {
     return (
@@ -21,7 +37,19 @@ export const CardsList = () => {
 
   return (
     <>
+      <div className='cardlist__search--container'>
+        <div className='cardlist__search--wrapper'>
+          <p className='cardlist__searchtitle'>Which first generation pokémon are you looking for?</p>
+          <input
+            className='cardslist__searchbar'
+            value={query}
+            placeholder='Search by name or type...'
+            onChange={(event) => handleSearch(event.target.value)}
+          />
+        </div>
+      </div>
       <div className='cardslist__container'>
+        {pokemons.length === 0 && <p className='cardslist__notfound--message'>Nothing Found</p>}
         {pokemons.map((item) => (
           <CardItem
             key={item.id}
