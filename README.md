@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="BAS API" src="./src/assets/static/private-lock-icon.png" width="100">
+    <img style="background-color: #0D1117; border-radius: 7px; padding: 10px;" alt="BAS API" src="./src/assets/static/private-lock-icon.png" width="100">
   <br>Basic Authentication System<br>
 </h1>
 <p align="center"><p>
