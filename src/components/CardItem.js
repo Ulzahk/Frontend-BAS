@@ -18,10 +18,17 @@ export const CardItem = ({ id, name, url, types }) => {
           <img className='card__image--src' src={url} />
         </div>
         <div className={`card__attributes ${types[0].type.name}__attributes`}>
-          <p className={`card__attributes--container ${types[0].type.name}`}>{types[0].type.name}</p>
+          <p
+            className={`card__attributes--container card__attribute--${types[0].type.name}`}
+          >
+            {types[0].type.name}
+          </p>
           {types[1]
-            ? <p className={`card__attributes--container ${types[1].type.name}`}>{types[1].type.name}</p>
-            : <></>}
+            ? (
+              <p className={`card__attributes--container card__attribute--${types[1].type.name}`}>
+                {types[1].type.name}
+              </p>)
+            : (<></>)}
         </div>
       </div>
     </div>

@@ -245,87 +245,174 @@
 }
 
 .card__attributes {
+  font-weight: bold;
   border-top: 3px solid $black;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  background-color: $black;
 }
 
 .card__container .grass__attributes{
+  background-color: $grass;
   border-color: $grass;
 }
 
 .card__container .fire__attributes{
+  background-color: $fire;
   border-color: $fire;
 }
 
 .card__container .water__attributes{
+  background-color: $water;
   border-color: $water;
 }
 
 .card__container .bug__attributes{
+  background-color: $bug;
   border-color: $bug;
 }
 
 .card__container .normal__attributes{
+  background-color: $normal;
   border-color: $normal;
 }
 
 .card__container .flying__attributes{
+  background-color: $flying;
   border-color: $flying;
 }
 
 .card__container .electric__attributes{
+  background-color: $electric;
   border-color: $electric;
 }
 
 .card__container .steel__attributes{
+  background-color: $steel;
   border-color: $steel;
 }
 
 .card__container .poison__attributes{
+  background-color: $poison;
   border-color: $poison;
 }
 
 .card__container .ground__attributes{
+  background-color: $ground;
   border-color: $ground;
 }
 
 .card__container .fairy__attributes{
+  background-color: $fairy;
   border-color: $fairy;
 }
 
 .card__container .fighting__attributes{
+  background-color: $fighting;
   border-color: $fighting;
 }
 
 .card__container .psychic__attributes{
+  background-color: $psychic;
   border-color: $psychic;
 }
 
 .card__container .rock__attributes{
+  background-color: $rock;
   border-color: $rock;
 }
 
 .card__container .ghost__attributes{
+  background-color: $ghost;
   border-color: $ghost;
 }
 
 .card__container .ice__attributes{
+  background-color: $ice;
   border-color: $ice;
 }
 
 .card__container .dragon__attributes{
+  background-color: $dragon;
   border-color: $dragon;
 }
 
 .card__attributes--container {
-  border: 1px solid $black;
+  border: 2px solid $white;
   border-radius: 50px;
   padding: 5px 10px 5px 10px;
   text-transform: capitalize;
   color: $white;
+}
+
+.card__attribute--grass {
+  background-color: $grass-button;
+}
+
+.card__attribute--fire {
+  background-color: $fire-button;
+}
+
+.card__attribute--water {
+  background-color: $water-button;
+}
+
+.card__attribute--bug {
+  background-color: $bug-button;
+}
+
+.card__attribute--normal {
+  background-color: $normal-button;
+}
+
+.card__attribute--flying {
+  background-color: $flying-button;
+}
+
+.card__attribute--electric {
+  background-color: $electric-button;
+}
+
+.card__attribute--steel {
+  background-color: $steel-button;
+}
+
+.card__attribute--poison{
+  background-color: $poison-button;
+}
+
+.card__attribute--ground{
+  background-color: $ground-button;
+}
+
+.card__attribute--fairy{
+  background-color: $fairy-button;
+}
+
+.card__attribute--fighting{
+  background-color: $fighting-button;
+}
+
+.card__attribute--psychic{
+  background-color: $psychic-button;
+}
+
+.card__attribute--rock{
+  background-color: $rock-button;
+}
+
+.card__attribute--ghost{
+  background-color: $ghost-button;
+}
+
+.card__attribute--ice{
+  background-color: $ice-button;
+}
+
+.card__attribute--dragon{
+  background-color: $dragon-button;
 }
 
 @media screen and (max-width: 425px){
