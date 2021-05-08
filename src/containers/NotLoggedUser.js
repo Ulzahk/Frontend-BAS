@@ -23,11 +23,11 @@ export const NotLoggedUser = (props) => {
       <>
         <Helmet>
           <meta charSet='utf-8' />
-          <title>BAS: Security Level One</title>
+          <title>BAS: Authentication Level One</title>
           <link rel='canonical' href='https://frontend-bas-ulzahk.vercel.app/level-one' />
         </Helmet>
         <div className='notloggeduser'>
-          <h2 className='notloggeduser__title'>Security Level One</h2>
+          <h2 className='notloggeduser__title'>Authentication Level One</h2>
           {
             errorsLevelOne.login !== undefined &&
               <p className='notloggeduser__error--information'>

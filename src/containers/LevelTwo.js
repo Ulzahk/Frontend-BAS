@@ -12,7 +12,7 @@ export const LevelTwo = () => {
 
   return (
     <div className='levelzero'>
-      <h2 className='levelzero__title'>Security Level Two</h2>
+      <h2 className='levelzero__title'>Authentication Level Two</h2>
       <button onClick={logOutFunction}>Cerrar Sesión</button>
       <CardsList />
     </div>
