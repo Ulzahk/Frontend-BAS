@@ -19,12 +19,12 @@ export const NotLoggedUserLevelTwo = () => {
       stepCounter === 0
         ?
           <div className='notloggeduser'>
-            <h2 className='notloggeduser__title'>Security Level Two</h2>
+            <h2 className='notloggeduser__title'>Authentication Level Two</h2>
             <OTPLogInForm onSubmit={logInFunction} title='Send OTP' />
           </div>
         :
           <div className='notloggeduser'>
-            <h2 className='notloggeduser__title'>Security Level Two</h2>
+            <h2 className='notloggeduser__title'>Authentication Level Two</h2>
             <OTPCodeForm onSubmit={logInFunction} title='OTP Validation' />
           </div>
     )

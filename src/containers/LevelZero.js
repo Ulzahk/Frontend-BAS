@@ -16,7 +16,7 @@ export const LevelZero = () => {
         <link rel='canonical' href='https://frontend-bas-ulzahk.vercel.app' />
       </Helmet>
       <div className='levelzero'>
-        <h2 className='levelzero__title'>Security Level Zero</h2>
+        <h2 className='levelzero__title'>Authentication Level Zero</h2>
         <CardsList />
       </div>
     </>

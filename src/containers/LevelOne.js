@@ -52,16 +52,16 @@ export const LevelOne = () => {
     <>
       <Helmet>
         <meta charSet='utf-8' />
-        <title>BAS: Security Level One</title>
+        <title>BAS: Authentication Level One</title>
         <link rel='canonical' href='https://frontend-bas-ulzahk.vercel.app/level-one' />
       </Helmet>
       <div className='levelone'>
-        <h2 className='levelone__title'>Security Level One</h2>
+        <h2 className='levelone__title'>Authentication Level One</h2>
         <div className='levelone__container'>
           {
             username !== undefined && <p className='levelone__text'>Welcome {username}</p>
           }
-          <button className='levelone__button' onClick={logOutFunction}>Cerrar Sesión</button>
+          <button className='levelone__button' onClick={logOutFunction}>Sign Out</button>
         </div>
         <CardsList />
       </div>

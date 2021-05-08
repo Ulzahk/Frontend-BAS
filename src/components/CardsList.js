@@ -21,6 +21,14 @@ export const CardsList = () => {
     text === undefined ? '' : text
 
     const pokemonsFiltered = allPokemons.filter((pokemon) => {
+      if (pokemon.types[1]) {
+        return (
+          pokemon.name.toLowerCase().includes(text.toLowerCase()) ||
+          pokemon.types[0].type.name.toLowerCase().includes(text.toLowerCase()) ||
+          pokemon.types[1].type.name.toLowerCase().includes(text.toLowerCase())
+        )
+      }
+
       return (
         pokemon.name.toLowerCase().includes(text.toLowerCase()) ||
         pokemon.types[0].type.name.toLowerCase().includes(text.toLowerCase())
